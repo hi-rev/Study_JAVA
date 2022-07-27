@@ -1,3 +1,5 @@
+package egoing;
+
 public class IfApp {
     public static void main(String[] args) {
         System.out.println("a");

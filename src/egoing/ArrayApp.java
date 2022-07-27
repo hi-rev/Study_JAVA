@@ -1,3 +1,5 @@
+package egoing;
+
 public class ArrayApp {
     public static void main(String[] args) {
         String[] users = new String[3];

@@ -1,3 +1,5 @@
+package egoing;
+
 public class Variable {
     public static void main(String[] args) {
         int a = 1;  // Number -> integer

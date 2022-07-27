@@ -1,3 +1,5 @@
+package egoing;
+
 public class Programming {
     public static void main(String[] args) {
         int num = 100;

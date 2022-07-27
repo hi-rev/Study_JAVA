@@ -1,3 +1,5 @@
+package egoing;
+
 public class AuthApp {
     public static void main(String[] args) {
         // Edit Configuration에서 args 값을 주었다.

@@ -1,3 +1,5 @@
+package egoing;
+
 public class LoopArray {
     public static void main(String[] args) {
         String[] users = new String[3];

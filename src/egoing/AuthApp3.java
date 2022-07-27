@@ -1,3 +1,5 @@
+package egoing;
+
 public class AuthApp3 {
     public static void main(String[] args) {
         // 유저 배열 생성
