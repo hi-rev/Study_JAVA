@@ -7,4 +7,4 @@
 - [X] 생활코딩 Java 제어문
 - [X] 생활코딩 Java method
 - [X] 생활코딩 Java 객체 지향 프로그래밍
-- [ ] 생활코딩 Java 상속
+- [X] 생활코딩 Java 상속
