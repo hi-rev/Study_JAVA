@@ -1,10 +1,21 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+// 빠른 A+B
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("         ,r'\"7");
-        System.out.println("r`-_   ,'  ,/");
-        System.out.println(" \\. \". L_r'");
-        System.out.println("   `~\\/");
-        System.out.println("      |");
-        System.out.println("      |");
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        for (int i = 0; i < t; i++) {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            System.out.println(a + b);
+        }
     }
 }
