@@ -3,19 +3,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int res = n;
-        int a, b, cnt = 0;
+        int[] arr = new int[9];
+        for (int i = 0; i < 9; i++) {
+            arr[i] = sc.nextInt();
+        }
 
-        while (true) {
-            a = n / 10;
-            b = n % 10;
-            n = b*10 + ((a+b) % 10);
-            cnt += 1;
-            if (res == n) {
-                System.out.println(cnt);
-                break;
+        int a = arr[0];
+        int idx = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (a < arr[i]) {
+                a = arr[i];
+                idx = i;
             }
         }
+        System.out.println(a);
+        System.out.println(idx + 1);
     }
 }
+
