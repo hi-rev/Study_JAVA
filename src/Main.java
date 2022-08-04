@@ -1,21 +1,21 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
-// 빠른 A+B
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
+        int n = sc.nextInt();
+        int res = n;
+        int a, b, cnt = 0;
 
-        for (int i = 0; i < t; i++) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            System.out.println(a + b);
+        while (true) {
+            a = n / 10;
+            b = n % 10;
+            n = b*10 + ((a+b) % 10);
+            cnt += 1;
+            if (res == n) {
+                System.out.println(cnt);
+                break;
+            }
         }
     }
 }
