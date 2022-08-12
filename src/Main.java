@@ -1,32 +1,29 @@
-// 셀프 넘버
-// 양의 정수 n에 대해서 d(n)을 n과 n의 각 자리수를 더하는 함수
+import java.util.Scanner;
+
+// 단어 공부
 public class Main {
     public static void main(String[] args) {
-        int n = 10000;
-        boolean[] idx = new boolean[n + 1];  // index 10000 까지의 배열 생성
+        Scanner sc = new Scanner(System.in);
+        // 각 문자들의 빈도수를 나타내기 위한 배열을 선언
+        int[] arr = new int[26];
+        String s = sc.next();  // 문자
+        s = s.toUpperCase();
 
-        for (int i = 0; i < n + 1; i++) {
-            if (d(i) < n + 1) {
-                idx[d(i)] = true;  // 셀프 넘버가 아닌 것
+        for (int i = 0; i < s.length(); i++) {
+            arr[s.charAt(i) - 65]++;
+        }
+
+        int max = -1;
+        char ch = '?';
+
+        for (int i = 0; i < 26; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                ch = (char) (i + 65); // 숫자를 대문자로 바꿈
+            } else if (arr[i] == max) {
+                ch = '?';
             }
         }
-
-        for (int i = 0; i < n + 1; i++) {
-            if (!idx[i]) {
-                System.out.println(i);
-            }
-        }
-    }
-
-    public static int d(int n) {
-        int res = n;
-
-        while (n != 0) {
-            res += n % 10;
-            n = n / 10;
-        }
-        return res;
+        System.out.println(ch);
     }
 }
-
-
